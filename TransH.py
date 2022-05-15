@@ -175,14 +175,6 @@ class TransH(nn.Module):
         h, r, t = torch.chunk(positive_triplets, 3, dim=1)
         h_c, r_c, t_c = torch.chunk(negative_triplets, 3, dim=1)
 
-        h = torch.squeeze(h, dim=1)
-        r = torch.squeeze(r, dim=1)
-        t = torch.squeeze(t, dim=1)
-
-        h_c = torch.squeeze(h_c, dim=1)
-        r_c = torch.squeeze(r_c, dim=1)
-        t_c = torch.squeeze(t_c, dim=1)
-
         positive = self.distance(h, r, t)
         negative = self.distance(h_c, r_c, t_c)
 
