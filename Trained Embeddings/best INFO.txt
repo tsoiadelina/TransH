@@ -1,0 +1,5 @@
+epochs : 10 000
+trained loss : 0.019
+validation loss : 0.275
+HITS@10 : 0.47144
+time : 3.5 h
